@@ -1,6 +1,6 @@
 # Fraud Radar 🛰️
 
-![CI](https://github.com/YOUR_GITHUB_USERNAME/fraud-radar/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/smit0801/fraud-radar/actions/workflows/ci.yml/badge.svg)
 
 Real-time transaction fraud scoring, inspired by Stripe Radar. Transactions stream through Kafka, get scored by an Isolation Forest behind a FastAPI service, and suspicious ones are published to an alerts topic.
 
