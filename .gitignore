@@ -9,3 +9,4 @@ data/*.csv
 models/*
 !models/.gitkeep
 *.zip
+scratch_check.py

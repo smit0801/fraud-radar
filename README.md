@@ -86,12 +86,13 @@ CI (GitHub Actions) runs lint + tests on every push.
 
 | Metric | Value |
 |---|---|
-| AUROC | 0.998 |
-| Average Precision | 0.76 |
-| Single-score latency | ~15 ms |
-| Batch of 200 | ~34 ms |
+  "auroc": 0.9474,
+  "average_precision": 0.1781,
+  "suggested_risk_threshold": 95.0,
+  "test_fraud_count": 148,
+  "test_size": 85443
 
-Expect lower numbers on the real Kaggle data (AUROC ~0.95, AP ~0.15–0.25 is typical for unsupervised IF) — real fraud is harder than synthetic fraud, which is a good talking point in itself.
+
 
 ## Ideas to extend
 
