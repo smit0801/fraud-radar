@@ -30,8 +30,8 @@ model = joblib.load(MODEL_DIR / "isolation_forest.joblib")
 scaler = joblib.load(MODEL_DIR / "amount_scaler.joblib")
 calibration_ref = np.load(MODEL_DIR / "calibration_ref.npy")
 
-RISK_THRESHOLD_REVIEW = 90.0   # flag for manual review
-RISK_THRESHOLD_BLOCK = 99.0    # auto-decline
+RISK_THRESHOLD_REVIEW = 99.0   # flag for manual review
+RISK_THRESHOLD_BLOCK = 99.9    # auto-decline
 
 
 class Transaction(BaseModel):
