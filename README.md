@@ -14,7 +14,7 @@ flowchart LR
 ```
 ## Demo
 
-![Fraud Radar live stream — producer replaying transactions, consumer scoring and flagging alerts in real time](FRAUD DEMO.gif)
+![Fraud Radar live stream — producer replaying transactions, consumer scoring and flagging alerts in real time](FRAUD%20DEMO.gif)
 ## How scoring works
 
 - **Model**: Isolation Forest, trained unsupervised on (mostly) normal traffic. Anomalies get isolated in fewer random splits, producing higher anomaly scores. Labels are used only for offline evaluation — mirroring reality, where fraud labels arrive weeks late via chargebacks.
