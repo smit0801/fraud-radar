@@ -12,7 +12,9 @@ flowchart LR
     A -->|"risk 0-100 + decision"| C
     C -->|"risk ≥ 90"| K2[("alerts topic")]
 ```
+## Demo
 
+![Fraud Radar live stream — producer replaying transactions, consumer scoring and flagging alerts in real time](FRAUD DEMO.gif)
 ## How scoring works
 
 - **Model**: Isolation Forest, trained unsupervised on (mostly) normal traffic. Anomalies get isolated in fewer random splits, producing higher anomaly scores. Labels are used only for offline evaluation — mirroring reality, where fraud labels arrive weeks late via chargebacks.
@@ -80,19 +82,17 @@ ruff check .
 
 CI (GitHub Actions) runs lint + tests on every push.
 
-## Results (synthetic data, 50k rows, 0.17% fraud)
 
-> **Note:** numbers below are from the synthetic generator. After retraining on the real Kaggle dataset, replace this table with your actual `metrics.json` output.
+
+## Results (Kaggle creditcard dataset, 284,807 transactions, 0.17% fraud)
 
 | Metric | Value |
-|---|---|
-  "auroc": 0.9474,
-  "average_precision": 0.1781,
-  "suggested_risk_threshold": 95.0,
-  "test_fraud_count": 148,
-  "test_size": 85443
-
-
+|--------|------:|
+| AUROC | 0.9474 |
+| Average Precision | 0.1781 |
+| Suggested Risk Threshold | 95.0 |
+| Test Fraud Count | 148 |
+| Test Size | 85,443 |
 
 ## Ideas to extend
 
