@@ -31,14 +31,7 @@ flowchart LR
     A -->|"risk 0–100 + decision"| C
     C -->|"risk ≥ 99"| K2[("alerts topic")]
 ```
-```mermaid
-flowchart LR
-    P["producer.py (CSV replay, configurable tx/s)"] -->|transactions topic| K[Kafka]
-    K --> C["consumer.py (micro-batches of 100)"]
-    C -->|"POST /score/batch"| A["FastAPI + Isolation Forest"]
-    A -->|"risk 0-100 + decision"| C
-    C -->|"risk >= 99"| K2[Kafka alerts topic]
-```
+
 ### Key Components
 
 * **Kafka (KRaft, single-node via Docker Compose)**
